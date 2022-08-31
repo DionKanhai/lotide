@@ -1,13 +1,20 @@
 // Imports the functions to run the tests
 const middle = require('../middle');
-const assertArraysEqual = require('../assertArraysEqual');
-const eqArrays = require('../eqArrays');
+const assert = require('chai').assert;
 
-// Test code
-console.log(middle([1, 3, 4, 5, 6])); // log 4
-console.log(middle([1, 2, 4, 4])); // log 4, 2
-console.log(middle([1, 2, 3])); // log 2
-console.log(middle([1, 2])); // log empty array []
-// assertion tests
-assertArraysEqual(eqArrays(middle([1, 3, 4, 5, 6]), true)); // the arrays do not match
-assertArraysEqual(eqArrays(middle([1, 3, 4, 5, 6]), false)); // the arrays do not match
+// Test code for middle function 
+// using Mocha functions and Chai assertion function library
+describe("#middle", () => {
+  it("returns [4] for [1, 3, 4, 5, 6]", () => {
+    assert.deepEqual(middle([1, 3, 4, 5, 6]), [4]);
+  });
+  it("returns [2] for [1, 2, 3]", () => {
+    assert.deepEqual(middle([1, 2, 3]), [2]);
+  });
+  it("returns [] for [1, 2]", () => {
+    assert.deepEqual(middle([1, 2]), []);
+  });
+  it("returns [4, 2] for [1, 2, 4, 3]", () => {
+    assert.deepEqual(middle([1, 2, 4, 3]), [4, 2]);
+  });
+});
