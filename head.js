@@ -1,18 +1,9 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    console.log(`Assertion Passed`);
-  } else if (actual !== expected) {
-    console.log(`Assertion Failed`);
-  }
-};
+const assertEqual = require('./assertEqual');
 
-//assertEqual("Lighthouse Labs", "Bootcamp");
-//assertEqual(1, 1);
-
+//This function takes an input array 
+//and returns the first index of that array
 const head = function(array) {
   return array[0];
 }
-
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-
+// enables the function to be exported to other files
+module.exports = head;
