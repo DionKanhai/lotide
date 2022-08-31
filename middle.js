@@ -1,19 +1,22 @@
-// Function that finds the middle number of an array depending on length
+/* Function that receives an array as a parameter, finds 
+ the middle number of that array and 
+then returns a new array with the middle number */
 const middle = function(arrays) {
-  let arrayLength = arrays.length
+  let arrayL = arrays.length 
   let newArray = [];
   // returns empty array for arrays with 2 or less numbers
-  if (arrayLength < 3) {
+  if (arrayL < 3) {
     return [];
   };
-  // finds index of middle number when length of array is odd
-  if (arrayLength % 2 !== 0) {
-    newArray.push(arrays[Math.floor(arrayLength / 2)]);
-    // finds index of middle numbers when length of array is even
-  } if (arrayLength % 2 === 0) {
-    newArray.push(arrays[(arrayLength / 2)], arrays[(arrayLength / 2 ) - 1]);
+  // returns index of middle number when length of array is odd and pushes it to new array
+  if (arrayL % 2 !== 0) {
+    newArray.push(arrays[Math.floor(arrayL / 2)]);
+    // returns index of middle numbers when length of array is even and pushes it to new array
+  } if (arrayL % 2 === 0) {
+    newArray.push(arrays[(arrayL / 2)], arrays[(arrayL / 2 ) - 1]);
   } 
   return newArray;
 };
 
+// enables the middle function to be exported
 module.exports = middle;
