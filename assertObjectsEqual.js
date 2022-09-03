@@ -1,16 +1,8 @@
-function eqArrays(array1, array2) {
-  if (array1.length !== array2.length) {
-    return false;
-  }
-  for (let i = 0; i < array1.length; i++) {
-    if (array1[i] !== array2[i]) {
-      return false;
-    }
-  }
-  return true;
-}
+// imports the function from the sourced file 
+const eqArrays = require('./eqArrays');
 
-// FUNCTION IMPLEMENTATION
+// This function will be passed two objects in and will return an assertion statement 
+// that will output if the objects are equal or not
 const assertObjectsEqual = function(object1, object2) {
   const inspect = require('util').inspect; // imports library so our function can use it
   const failure = `Assertion Failed: ${inspect(object1)} !== ${inspect(object2)}`
@@ -39,9 +31,6 @@ const assertObjectsEqual = function(object1, object2) {
   }
   console.log(`Assertion Passed: ${inspect(object1)} === ${inspect(object2)}`)
 };
-// test code 
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-const cd2 = { c: "1", d: ["2", 3, 4] };
 
-assertObjectsEqual(cd, dc);
+// Enable this function to be exported to other files
+module.exports = assertObjectsEqual;
