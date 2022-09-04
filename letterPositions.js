@@ -5,7 +5,6 @@ const assertArraysEqual = require('./assertArraysEqual');
 and value (all indices where the string is found)*/
 const letterPositions = function(sentence) {
   const results = {};
-  console.log(results)
   for (let i = 0; i < sentence.length; i++) {
     //variable that stores the individual letter positions of the input string in the loop
     const character = sentence[i];
