@@ -12,7 +12,9 @@ Step 2. Scan the object and return the first key with the inputted value
 Step 3. If no key with that value is found, return undefined */
 
 const findKeyByValue = function(object, value) {
+  // loop through the object
   for (const keys in object) {
+    // find the first key-value pair that matches with the input value and return it
     if (object[keys] === value)
       return keys;
   }
