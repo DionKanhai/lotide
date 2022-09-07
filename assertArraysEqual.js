@@ -1,3 +1,4 @@
+// Imports the file to be used in the function
 const eqArrays = require('./eqArrays');
 
 // Function that is passed in an two arrays and outputs an assertion message if the two arrays match or not
