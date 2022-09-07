@@ -26,3 +26,5 @@ let afterFlat = flatten(nestedArray);
 console.log(afterFlat);
 console.log(eqArrays([1, 2, 3, 4, 5, 6], afterFlat)); // => logs true
 console.log(eqArrays([1, 2, [3, 4], 5, [6]], afterFlat)); // => logs false
+
+module.exports = flatten;

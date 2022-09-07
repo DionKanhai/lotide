@@ -35,3 +35,5 @@ assertArraysEqual(findKey({
   "Akelarre":  { stars: 3 }
 }, x => x.stars === 3)) // returns the arrays do not match!
 
+module.exports = findKey;
+

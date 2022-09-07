@@ -24,3 +24,5 @@ const countLetters = function (stringsToCount) {
 // test code 
 console.log(countLetters("Lighthouse labs"));
 assertEqual(countLetters("Lighthouse labs"));
+
+module.exports = countLetters;

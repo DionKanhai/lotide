@@ -8,7 +8,7 @@ function without(source, itemsToRemove) {
   // take in the source array and use the filter method on each element in the array
   // if the element is not item to be removed return element
   return source.filter(element => !itemsToRemove.includes(element));
-} 
+};
 
 // Test code
 console.log(without([1, 2, 3], [1]));

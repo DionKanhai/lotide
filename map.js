@@ -25,3 +25,5 @@ const results2 = ["g", "c", "t", "m", "t"]
 // test code
 assertArraysEqual(maps(words, word => word[0])); // prints out the arrays do not match
 assertArraysEqual(maps(results1, results2));
+
+module.exports = maps;

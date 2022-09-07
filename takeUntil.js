@@ -22,3 +22,5 @@ const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
 const results1 = takeUntil(data1, value => value < 0);
 console.log(results1);
 console.log(assertArraysEqual(data1, results1));
+
+module.exports = takeUntil;

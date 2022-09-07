@@ -44,3 +44,5 @@ assertEqual(result1["Fang"], 2);
 assertEqual(result1["Agouhanna"], undefined);
 
 console.log(countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false }));
+
+module.exports = countOnly;

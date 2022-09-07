@@ -13,7 +13,7 @@ const middle = function(arrays) {
     newArray.push(arrays[Math.floor(arrayL / 2)]);
     // returns index of middle numbers when length of array is even and pushes it to new array
   } if (arrayL % 2 === 0) {
-    newArray.push(arrays[(arrayL / 2)], arrays[(arrayL / 2 ) - 1]);
+    newArray.push(arrays[(arrayL / 2) - 1], arrays[(arrayL / 2 )]);
   } 
   return newArray;
 };
